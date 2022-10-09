@@ -4,26 +4,7 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "caller",
-						"type": "address"
-					}
-				],
-				"name": "Unauthorized",
-				"type": "error"
-			},
-			{
-				"inputs": [],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -37,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/CustomError.sol": "VendingMachine"
+			"contracts/FunctionImport.sol": "Import"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -57,6 +38,14 @@
 			"urls": [
 				"bzz-raw://890b2a540d96edb48bd25687f1a19ae167bed242766c083da4748e7f449ca4a9",
 				"dweb:/ipfs/QmPA9jJtDSDtSwtPPhNr7pTjDPEcHoEdV2zPXUYxF3zkmZ"
+			]
+		},
+		"contracts/FunctionImport.sol": {
+			"keccak256": "0xd52896dc6ed6837992827e6a744000461c56fcf9f1f10775624704f670b35108",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f89d97460629857cae73e9eb837f9f786cba9844b9e310f8cc6b23e8b5442057",
+				"dweb:/ipfs/QmVk8RjPsEWUVN4x6kRJcLkDReP6iy9qqsNras2PeKwSu9"
 			]
 		}
 	},

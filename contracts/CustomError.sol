@@ -7,6 +7,11 @@ pragma solidity >=0.7.0 <0.9.0;
 // this reduce gas fee required - much cheaper than sending a string
 error Unauthorized(address caller);
 
+// exportable function
+function helper(uint x) pure returns (uint) {
+    return x * 2;
+}
+
 contract VendingMachine {
     address payable owner = payable(msg.sender);
 

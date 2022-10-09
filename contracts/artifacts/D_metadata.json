@@ -8,19 +8,25 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "caller",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
 					}
 				],
-				"name": "Unauthorized",
-				"type": "error"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
 				"inputs": [],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "x",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -37,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/CustomError.sol": "VendingMachine"
+			"contracts/Create2.sol": "D"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -51,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/CustomError.sol": {
-			"keccak256": "0xce603e00ff469c13dca609514e10f347c3f6710b35e90837859b813e55d5162a",
+		"contracts/Create2.sol": {
+			"keccak256": "0x21bb236a0ef22fe62dd3c3bbb2c44e06a4cffc01d51e95704fc2db6bc9ff3d16",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://890b2a540d96edb48bd25687f1a19ae167bed242766c083da4748e7f449ca4a9",
-				"dweb:/ipfs/QmPA9jJtDSDtSwtPPhNr7pTjDPEcHoEdV2zPXUYxF3zkmZ"
+				"bzz-raw://442ee5f6bda038185b93820f8834fadf076841936d2927c8fb10b5173dbf08df",
+				"dweb:/ipfs/QmT3rNC86vzLBvGzptAjDp8gkNy17R653kf9Xyy93Cx8Xw"
 			]
 		}
 	},
