@@ -8,24 +8,22 @@
 			{
 				"inputs": [
 					{
-						"internalType": "bytes32",
-						"name": "salt",
-						"type": "bytes32"
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "arg",
+						"name": "_y",
 						"type": "uint256"
 					}
 				],
-				"name": "createDSalted",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
+				"stateMutability": "payable",
+				"type": "constructor"
 			},
 			{
 				"inputs": [],
-				"name": "deployedAddress",
+				"name": "owner",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -37,43 +35,39 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "value",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "salt",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "getBytes32",
-				"outputs": [
-					{
-						"internalType": "bytes32",
-						"name": "",
-						"type": "bytes32"
-					}
-				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
-						"name": "salt",
-						"type": "bytes32"
-					},
+				"inputs": [],
+				"name": "x",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "arg",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "getPredictedAddress",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "y",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -93,7 +87,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Create2.sol": "Create2"
+			"contracts/Proxy.sol": "TestContract2"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -107,12 +101,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Create2.sol": {
-			"keccak256": "0x6f2c3c7da8320e4b6caf1614505ffa19e2c3ae84ebf30026ec13ce08321b1e44",
+		"contracts/Proxy.sol": {
+			"keccak256": "0x27d3c86434a0b786ae1a2902852ffb9cfa9fc1bef1d9269ad630587c0d8b86ac",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6faf671e182aa21b70f4f17b88bf080e0e0232be8628dfbba61c0767405b0128",
-				"dweb:/ipfs/QmbizPw9Djpsx73zw6VuKNWm3bw4W2aN5JrCpMqPjewTfb"
+				"bzz-raw://b26694ac0c4e5fec4bffa18c1706f13efe170db422e8d826ae32b75056e61944",
+				"dweb:/ipfs/QmSpKuSk8tCo6fZKarXS85HZMEx6Dh6N4sCabKwRcvpJ9P"
 			]
 		}
 	},

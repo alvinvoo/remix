@@ -2,7 +2,8 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
-// Salted contract creations / create2
+// For Salted contract creations can use `new ContractClass{salt: salt}()`  
+// no need to use assembly create2 anymore
 contract D {
     uint public x;
     constructor(uint a) {
