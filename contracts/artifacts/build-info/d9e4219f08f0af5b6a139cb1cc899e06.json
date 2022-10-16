@@ -1,0 +1,440 @@
+{
+	"id": "d9e4219f08f0af5b6a139cb1cc899e06",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Fallback.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\npragma solidity ^0.8.7;\n\n/*\nFallback executed when\n- function doesn't exist\n- directly send ETH (to contract)\n*/\n\ncontract Fallback {\n\n    // will be executed when msg.data is NOT empty\n    fallback() external payable{}\n\n    // will be executed when msg.data is empty\n    receive() external payable{}\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/Fallback.sol": {
+				"Fallback": {
+					"abi": [
+						{
+							"stateMutability": "payable",
+							"type": "fallback"
+						},
+						{
+							"stateMutability": "payable",
+							"type": "receive"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/Fallback.sol\":150:338  contract Fallback {... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/Fallback.sol\":150:338  contract Fallback {... */\n      mstore(0x40, 0x80)\n      jumpi(tag_2, calldatasize)\n      stop\n    tag_2:\n      stop\n\n    auxdata: 0xa2646970667358221220738e97bfb73855ddbd9b53e79b71706597883618e752145174d716d6ceb1274564736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50604280601d6000396000f3fe608060405236600a57005b00fea2646970667358221220738e97bfb73855ddbd9b53e79b71706597883618e752145174d716d6ceb1274564736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x42 DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLDATASIZE PUSH1 0xA JUMPI STOP JUMPDEST STOP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH20 0x8E97BFB73855DDBD9B53E79B71706597883618E7 MSTORE EQ MLOAD PUSH21 0xD716D6CEB1274564736F6C63430008070033000000 ",
+							"sourceMap": "150:188:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {
+								"@_5": {
+									"entryPoint": null,
+									"id": 5,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								},
+								"@_9": {
+									"entryPoint": null,
+									"id": 9,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								}
+							},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "608060405236600a57005b00fea2646970667358221220738e97bfb73855ddbd9b53e79b71706597883618e752145174d716d6ceb1274564736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLDATASIZE PUSH1 0xA JUMPI STOP JUMPDEST STOP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH20 0x8E97BFB73855DDBD9B53E79B71706597883618E7 MSTORE EQ MLOAD PUSH21 0xD716D6CEB1274564736F6C63430008070033000000 ",
+							"sourceMap": "150:188:0:-:0;;;;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "13200",
+								"executionCost": "69",
+								"totalCost": "13269"
+							},
+							"external": {
+								"": "34"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 150,
+									"end": 338,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220738e97bfb73855ddbd9b53e79b71706597883618e752145174d716d6ceb1274564736f6c63430008070033",
+									".code": [
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "CALLDATASIZE",
+											"source": 0
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "PUSH [tag]",
+											"source": 0,
+											"value": "2"
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "JUMPI",
+											"source": 0
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "STOP",
+											"source": 0
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "tag",
+											"source": 0,
+											"value": "2"
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "JUMPDEST",
+											"source": 0
+										},
+										{
+											"begin": 150,
+											"end": 338,
+											"name": "STOP",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Fallback.sol\":\"Fallback\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Fallback.sol\":{\"keccak256\":\"0xb16dadb9a713d6a597116760d9ff42b11f830db05cad44870da18ad7f1f09c30\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://1ff94346b1bf355adccc80fa48f9ef3c0eac017f98b9bf982965f78de9f6b033\",\"dweb:/ipfs/QmNmRu2SJfXCkPAxCxTydyJqui6BbHszG4VCHgvCc24Z58\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/Fallback.sol": {
+				"ast": {
+					"absolutePath": "contracts/Fallback.sol",
+					"exportedSymbols": {
+						"Fallback": [
+							10
+						]
+					},
+					"id": 11,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".7"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "36:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 10,
+							"linearizedBaseContracts": [
+								10
+							],
+							"name": "Fallback",
+							"nameLocation": "159:8:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"body": {
+										"id": 4,
+										"nodeType": "Block",
+										"src": "253:2:0",
+										"statements": []
+									},
+									"id": 5,
+									"implemented": true,
+									"kind": "fallback",
+									"modifiers": [],
+									"name": "",
+									"nameLocation": "-1:-1:-1",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 2,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "234:2:0"
+									},
+									"returnParameters": {
+										"id": 3,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "253:0:0"
+									},
+									"scope": 10,
+									"src": "226:29:0",
+									"stateMutability": "payable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"body": {
+										"id": 8,
+										"nodeType": "Block",
+										"src": "334:2:0",
+										"statements": []
+									},
+									"id": 9,
+									"implemented": true,
+									"kind": "receive",
+									"modifiers": [],
+									"name": "",
+									"nameLocation": "-1:-1:-1",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 6,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "315:2:0"
+									},
+									"returnParameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "334:0:0"
+									},
+									"scope": 10,
+									"src": "308:28:0",
+									"stateMutability": "payable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 11,
+							"src": "150:188:0",
+							"usedErrors": []
+						}
+					],
+					"src": "36:302:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
