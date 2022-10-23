@@ -19,15 +19,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "dec",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "inc",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_counter",
+						"type": "address"
+					}
+				],
+				"name": "examples",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -46,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Counter.sol": "Counter"
+			"contracts/Interface.sol": "CallInterface"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -60,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Counter.sol": {
-			"keccak256": "0x297339555bda3853917fccad6e0668173aca6ad61a2ec8dab486909be5099e92",
+		"contracts/Interface.sol": {
+			"keccak256": "0x7ab4daf07dd46f09f77966f3ccbd0902720517c4eebe5f82789faa9b0def628e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://838b4d937c89b64ad8a6ab213b1045fc1880b3aba8e4c971e8dbc7097b2d892d",
-				"dweb:/ipfs/QmcVVEQZPYWANFkNh8ZmVs7LBwh6eGWnwf8vKKr6nMansG"
+				"bzz-raw://60146f841311a7540cf71b1fa2a634bcadb8897aff6f7c46ba5f8949640d453a",
+				"dweb:/ipfs/QmQPpdA5an4ocuYyZ1Fw7971mcrWbaEgGvNWixz7p2uQLJ"
 			]
 		}
 	},

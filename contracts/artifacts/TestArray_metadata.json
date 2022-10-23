@@ -6,8 +6,14 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "count",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -20,16 +26,15 @@
 			},
 			{
 				"inputs": [],
-				"name": "dec",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "inc",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "testFind",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -46,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Counter.sol": "Counter"
+			"contracts/Library.sol": "TestArray"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -60,12 +65,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Counter.sol": {
-			"keccak256": "0x297339555bda3853917fccad6e0668173aca6ad61a2ec8dab486909be5099e92",
+		"contracts/Library.sol": {
+			"keccak256": "0x5e1d365f9d5e9a0285d1ee15ba6c6b3f87b37ce9c792335df5fbf2cd6b427e31",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://838b4d937c89b64ad8a6ab213b1045fc1880b3aba8e4c971e8dbc7097b2d892d",
-				"dweb:/ipfs/QmcVVEQZPYWANFkNh8ZmVs7LBwh6eGWnwf8vKKr6nMansG"
+				"bzz-raw://3478cedb49b366cf4a63d51b31519904b2ada2baa8a7a682513edd021aa2bd70",
+				"dweb:/ipfs/QmP2xHDTV7y17xPTBhgGZFnpRbS3A6ZrTEXisvRB6ix2bc"
 			]
 		}
 	},

@@ -7,7 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "count",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -20,17 +25,33 @@
 			},
 			{
 				"inputs": [],
-				"name": "dec",
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "inc",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -46,7 +67,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Counter.sol": "Counter"
+			"contracts/EtherWallet.sol": "EtherWallet"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -60,12 +81,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Counter.sol": {
-			"keccak256": "0x297339555bda3853917fccad6e0668173aca6ad61a2ec8dab486909be5099e92",
+		"contracts/EtherWallet.sol": {
+			"keccak256": "0x0b3ea8a2a9d9abecd4d9ce4e02d6132e8747a7bd37746004fca1ebd44e64a25b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://838b4d937c89b64ad8a6ab213b1045fc1880b3aba8e4c971e8dbc7097b2d892d",
-				"dweb:/ipfs/QmcVVEQZPYWANFkNh8ZmVs7LBwh6eGWnwf8vKKr6nMansG"
+				"bzz-raw://2699cab257678fb13bb385a44e071c8bd8d06ec2f0dce747eab5f52d95aafb9b",
+				"dweb:/ipfs/QmR7P91QoZq3bsY3qLn7pKuC9FVgnfc84cAoqPCrctquBT"
 			]
 		}
 	},

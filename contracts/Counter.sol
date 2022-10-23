@@ -2,6 +2,7 @@
 pragma solidity ^0.8.7;
 
 contract Counter {
+    // for public state, an external getter function - count() is created
     uint public count;
 
     // WRITE function, no need modifier
