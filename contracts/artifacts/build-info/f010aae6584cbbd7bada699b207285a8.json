@@ -1,0 +1,68 @@
+{
+	"id": "f010aae6584cbbd7bada699b207285a8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Hash.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\npragma solidity ^0.8.7;\n\n// keccak256\n// use cases: \n// 1. sign a signature\n// 2. create an unique id\n// 3. create a contract to prevent from front-running\n\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/Hash.sol": {
+				"ast": {
+					"absolutePath": "contracts/Hash.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".7"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "36:23:0"
+						}
+					],
+					"src": "36:157:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
